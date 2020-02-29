@@ -3,13 +3,13 @@ CC         := /usr/bin/g++
 CFLAGS     += -Wall
 MJ_OBJECTS := main.o MahjongSet.o Tiles.o #TilesType.o
 OBJECTS	   := $(MJ_OBJECTS)
-EXE        := test_MJ_main
+EXE        := test_MJ_main.exe
 
 
 .PHONY: all
 all: $(EXE)
 
-test_MJ_main: $(MJ_OBJECTS)
+test_MJ_main.exe: $(MJ_OBJECTS)
 	$(CC) $(CFLAGS) -o $@ $^
 	@ echo Changed files: $?
 
